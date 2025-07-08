@@ -1,9 +1,18 @@
 let express = require("express");
 const DBConnection = require("./db");
+let cors = require('cors')
 let app = express();
 const bodyParser = require("body-parser");
 require('dotenv').config();
 
+//CORS error resolvd
+app.use(cors())
+
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+  credentials: true
+}
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());

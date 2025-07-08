@@ -1,0 +1,43 @@
+* PLANING 
+
+
+# Funstionalitys
+# Models
+# Routes
+
+---------------------------------------------------------------------------------------------------
+A. Funstionalitys.
+1. User signup/rajister and login (user can only login as a woner)
+2. user/woner can make a manu-dashbord by adding desh-name, desh-price, desh-img in the (menu-item-form),
+3. user/woner can see all deshs on (menu-dashbord) 
+4. user/woner can make a bill by clicking on the eany desh-item after clicking on (make-bill) btn.
+5. user/woner can see that bill on (bill) page
+
+---------------------------------------------------------------------------------------------------
+
+B. Models
+
+1.User
+- username
+- password
+- emailid
+- phone
+- restaurant name
+
+2.Desh-item
+- desh-name
+- desh-price
+- desh-img.
+
+---------------------------------------------------------------------------------------------------
+
+C. Routes
+
+1. USER-AUTH
+/signup: POST - Creat a new user/woner.
+/signin: POST - login to a existing acount.
+
+3. MENU-ITEM
+/add-item-form: POST - creating a new menu-item {form}
+/item-dashbord: GET - woner can see all the menu-item {dashbord}
+
