@@ -7,7 +7,7 @@ route.post("/menu", async (req, res) => {
     let manuReq = req.body;
     let manuData = new manuItem(manuReq);
     let response = await manuData.save();
-    res.status(200).json(response);
+    res.status(200).json(response); 
   } catch (error) {
     res.status(500).json({
       message: "Internal server error",
