@@ -30,7 +30,7 @@ route.get("/menu", async (req, res) => {
   }
 });
 
-route.put("/menu/:id", async (req, res) => {
+route.put("/menu/put/:id", async (req, res) => {
   try {
     let itemId = req.params.id;
     let updateMenu = req.body;
@@ -48,7 +48,7 @@ route.put("/menu/:id", async (req, res) => {
   }
 });
 
-route.delete("/menu/:id", async (req, res) => {
+route.delete("/menu/delete/:id", async (req, res) => {
   try {
     let itemId = req.params.id;
     let deleteManuById = await manuItem.findByIdAndDelete(itemId);
