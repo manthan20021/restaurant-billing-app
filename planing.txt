@@ -41,3 +41,13 @@ C. Routes
 /add-item-form: POST - creating a new menu-item {form}
 /item-dashbord: GET - woner can see all the menu-item {dashbord}
 
+[
+    file uplod functionality 
+     -npm i cloudinary
+     -npm i multer
+     -utils/cloudinary.js
+     -requir v2 from cloudinary
+     -requir fs from fs
+     -copy cloudinary configretion from cloudinary and pest in side "utils/cloudinary.js"
+     -store cloudName, apiKey and apiScret inside .env
+]

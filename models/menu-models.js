@@ -1,12 +1,11 @@
-const { default: mongoose } = require("mongoose");
+import mongoose from "mongoose";
 
 const MenuSchema = new mongoose.Schema({
     itemName:{
         type:String,
-        require:true
-    },
-    description:{
-        type:String
+        require:true,
+        minlength:3,
+        maxlength:12
     },
     price:{
         type:Number,
@@ -19,4 +18,4 @@ const MenuSchema = new mongoose.Schema({
 });
 
 const menu = mongoose.model('menu', MenuSchema);
-module.exports = menu;
+export default menu
