@@ -26,11 +26,15 @@ app.use(bodyParser.json());
 
 //importing routes
 import route from './routes/menu-route.js';
+import userRoute from './routes/user-route.js';
+
+
+
 
 
 //middelwer for rendering routes
 app.use("/",  route)
- 
+app.use("/", userRoute)
 
 DBConnection().then(() => {
    const PORT = process.env.PORT || 3000
