@@ -34,9 +34,25 @@ B. Models
 
 C. Routes
 
-1. USER-AUTH
+1. ✅USER
+a.Register
 /signup: POST - Creat a new user/woner.
+
+b. ✅login 
 /signin: POST - login to a existing acount.
+
+c. ✅user can see profile 
+/userProfile: GET - can see profile
+
+d. ✅update password
+/userProfile/password PUT - user can update password
+
+e. ✅ Logout user
+
+
+2.AuthController
+async method => registerUser
+async method => loginUser
 
 3. MENU-ITEM
 /add-item-form: POST - creating a new menu-item {form}
