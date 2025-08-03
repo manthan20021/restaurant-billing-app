@@ -7,8 +7,8 @@ import authMiddlerwer from "../middlewares/authMiddleware.js"
 userRoute.post('/register', registerUser )
 userRoute.post('/login', loginUser)
 userRoute.get('/profile', authMiddlerwer, getUser)
-userRoute.put('/update-password', updatePassword)
-userRoute.get('/logout', logoutUser)
+userRoute.put('/update-password',authMiddlerwer, updatePassword)
+userRoute.get('/logout',authMiddlerwer, logoutUser)
 
 
 export default userRoute
