@@ -44,12 +44,14 @@ export const registerUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
   const { email, password } = req.body;
+  
   try {
+    
     const woner = await User.findOne({ email });
     if (!woner) return res.status(400).json({ msg: "Invalid credentials email" });
 
     //compareing password
-    const isMatch = await bcrypt.compare(password, woner.password);
+    const isMatch =  await bcrypt.compare(password, woner.password);
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials password" });
 
     //geting token
