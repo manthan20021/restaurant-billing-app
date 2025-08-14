@@ -30,6 +30,3 @@ export const updatePassword = async (req, res) => {
     }
 }
 
-export const logoutUser = (req, res) => {
-  res.json({ msg: "Logout by deleting token on client" });
-};
