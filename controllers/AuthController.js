@@ -8,11 +8,10 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 export const registerUser = async (req, res) => {
   const { 
-    name,
+    restaurantname,
+    email,
       password,
-      email,
       phone,
-      restaurantname,
       role} = req.body
   try {
     //chacking user is allredy existi
@@ -23,11 +22,10 @@ export const registerUser = async (req, res) => {
     //hashing password
     const hashedPassword = await bcrypt.hash(password, 10);
     await User.create({
-      name,
-      password: hashedPassword,
-      email,
-      phone,
       restaurantname,
+      email,
+      password: hashedPassword,
+      phone,
       role
     });
 

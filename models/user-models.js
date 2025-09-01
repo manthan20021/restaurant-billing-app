@@ -1,11 +1,7 @@
 import mongoose from "mongoose"
 
 const userSchema = new mongoose.Schema({
-    name:{
-        type: String,
-        require: true,
-    },
-    password:{
+   restaurantname:{    
         type:String,
         require:true
     },
@@ -13,12 +9,12 @@ const userSchema = new mongoose.Schema({
         type:String,
         require:true
     },
-    phone:{
-        type:String
-    },
-    restaurantname:{    
+    password:{
         type:String,
         require:true
+    },
+    phone:{
+        type:String
     },
     role:{
         type:String,
@@ -29,3 +25,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('user', userSchema);
 export default User;
+
+
+//   "password": "testuser123",
+    //"email": "test@gmail.com",
