@@ -7,9 +7,9 @@
 
 ---------------------------------------------------------------------------------------------------
 A. Funstionalitys.
-1. User signup/rajister and login (user can only login as a woner)
-2. user/woner can make a manu-dashbord by adding desh-name, desh-price, desh-img in the (menu-item-form),
-3. user/woner can see all deshs on (menu-dashbord) 
+1. User signup/rajister and login (user can only login as a woner)- DONE✅
+2. user/woner can make a manu-dashbord by adding desh-name, desh-price, desh-img in the (menu-item-form)- DONE✅
+3. user/woner can see all deshs on (menu-dashbord)- DONE✅
 4. user/woner can make a bill by clicking on the eany desh-item after clicking on (make-bill) btn.
 5. user/woner can see that bill on (bill) page
 

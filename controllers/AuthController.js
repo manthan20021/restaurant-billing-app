@@ -12,7 +12,8 @@ export const registerUser = async (req, res) => {
     email,
       password,
       phone,
-      role} = req.body
+      role
+    } = req.body
   try {
     //chacking user is allredy existi
     const existingUser = await User.findOne({ email });
@@ -28,6 +29,7 @@ export const registerUser = async (req, res) => {
       phone,
       role
     });
+//
 
     //responce
     res.status(201).json({ msg: "User registered successfully" });
@@ -53,10 +55,16 @@ export const loginUser = async (req, res) => {
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials password" });
 
     //geting token
-    const token = jwt.sign({ userId: woner._id }, JWT_SECRET, {
-      expiresIn: "1h",
+    const token = jwt.sign(
+      { userId: woner._id }, 
+      JWT_SECRET, 
+      {expiresIn: "1d"}
+    );
+    res.json({
+      token
     });
-    res.json({ token });
+
+
   } catch (error) {
     res.status(500).json({ msg: "Login failed" });
   }

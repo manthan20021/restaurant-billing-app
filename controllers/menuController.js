@@ -3,10 +3,12 @@ import manuItem from "../models/menu-models.js"
 //Add Menu
 export const addMenu = async (req, res) => {
    try {
-    let manuReq = req.body;
-    let manuData = new manuItem(manuReq);
+    let manuData = new manuItem({
+      ...req.body,
+      userId: req.user
+    });
     let response = await manuData.save();
-    res.status(200).json(response);
+    res.status(201).json(response);
 
   } catch (error) {
     res.status(500).json({
@@ -20,7 +22,7 @@ export const addMenu = async (req, res) => {
 // Get Menu
 export const getMenu = async (req, res) => {
      try {
-    let menuData = await manuItem.find();
+    let menuData = await manuItem.find({userId: req.user});
     res.status(200).json(menuData);
   } 
   catch (error) {

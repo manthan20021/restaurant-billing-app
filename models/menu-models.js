@@ -9,11 +9,16 @@ const MenuSchema = new mongoose.Schema({
     },
     price:{
         type:Number,
-        require:true
+        required:true
     },
     itemImg:{
         type:String,
-    }
+    },
+      userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
     
 });
 

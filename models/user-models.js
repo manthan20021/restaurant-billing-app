@@ -3,15 +3,15 @@ import mongoose from "mongoose"
 const userSchema = new mongoose.Schema({
    restaurantname:{    
         type:String,
-        require:true
+        required:true
     },
     email:{
         type:String,
-        require:true
+        required:true
     },
     password:{
         type:String,
-        require:true
+        required:true
     },
     phone:{
         type:String
@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         enum:["user", "admin"],
         default:"user"
-    }
+    },
 })
 
 const User = mongoose.model('user', userSchema);

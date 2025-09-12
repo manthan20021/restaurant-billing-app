@@ -5,8 +5,10 @@ import authMiddlerwer from '../middlewares/authMiddleware.js';
 
 
 route.post("/menu", authMiddlerwer, addMenu);
-route.get("/menu", authMiddlerwer,  getMenu);
-route.put("/menu/put/:id", authMiddlerwer, updateMenu);
+route.get("/menu/", authMiddlerwer,  getMenu);
+route.patch("/menu/put/:id", authMiddlerwer, updateMenu);
 route.delete("/menu/delete/:id", authMiddlerwer, deleteMenu);
 
 export default route
+
+
